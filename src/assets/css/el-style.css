@@ -1,0 +1,21 @@
+.el-overlay.is-message-box .el-overlay-message-box {
+    top:-30vh;
+}
+
+.el-table__body tr.current-row>td{
+    background-color: #006be626 !important;
+    color: #006be6;
+}
+
+.el-form{
+    width: 100%;
+}
+.el-header{
+    height: auto!important;
+}
+.el-tabs__header{
+    margin-bottom: 0 !important;
+}
+.el-dialog{
+    min-width: 350px;
+}

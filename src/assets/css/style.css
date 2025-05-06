@@ -1,0 +1,65 @@
+:root{
+    --el-menu-item-height: 46px!important;
+}
+
+
+* {
+    padding: 0;
+    margin: 0;
+    font-family: -apple-system,blinkmacsystemfont,Segoe UI,roboto,Helvetica Neue,arial,Noto Sans,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol,Noto Color Emoji;;
+}
+
+#app {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
+}
+
+body {
+    font-family: Helvetica Neue, Helvetica, PingFang SC, Hiragino Sans GB, Microsoft YaHei, \5fae\8f6f\96c5\9ed1, Arial, sans-serif;
+
+}
+
+div::-webkit-scrollbar {
+    width: 0;
+    display: none;
+    -ms-overflow-style: none; /* IE and Edge */
+    scrollbar-width: none; /* Firefox */
+}
+
+.nav {
+    width: 100%;
+}
+
+.el-aside {
+    width: auto !important;
+    box-shadow: var(--el-box-shadow-light);
+    border-right: #e4e4e7 solid 1px;
+}
+.dark .el-aside{
+    background-color: #181e21;
+    box-shadow: var(--el-box-shadow-dark);
+    border-right: #403e3e solid 1px;
+}
+.side-menu {
+    width: 180px;
+}
+
+@media screen and (max-width: 1000px) {
+    .side-menu {
+        width: 100%;
+    }
+}
+
+.overflow-auto {
+    overflow: auto;
+}
+
+.tox-tinymce{
+    border-radius: 3px!important;
+}
+
+#tab-\/index > i {
+    display: none !important;
+}
