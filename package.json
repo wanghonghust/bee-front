@@ -9,17 +9,17 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "@element-plus/icons-vue": "^2.0.6",
-    "@fortawesome/fontawesome-svg-core": "^6.2.0",
-    "@fortawesome/free-brands-svg-icons": "^6.2.0",
-    "@fortawesome/free-regular-svg-icons": "^6.2.0",
-    "@fortawesome/free-solid-svg-icons": "^6.2.0",
-    "@fortawesome/sharp-solid-svg-icons": "^6.2.0",
-    "@fortawesome/vue-fontawesome": "^3.0.1",
+    "@fortawesome/fontawesome-svg-core": "^6.7.2",
+    "@fortawesome/free-regular-svg-icons": "^6.7.2",
+    "@fortawesome/vue-fontawesome": "^3.0.8",
     "@npkg/tinymce-plugins": "^0.0.7",
     "@tinymce-plugin/tp-importword": "^0.0.3-beta.8",
     "@tinymce/tinymce-vue": "^5.0.0",
     "@types/tinymce": "^4.6.5",
+    "@xterm/addon-attach": "^0.11.0",
+    "@xterm/addon-canvas": "^0.7.0",
+    "@xterm/addon-fit": "^0.10.0",
+    "@xterm/xterm": "^5.5.0",
     "axios": "^0.27.2",
     "clipboard": "^2.0.11",
     "el-tree-transfer": "^2.4.7",
@@ -41,12 +41,7 @@
     "vue-baidu-calendar": "^1.0.8",
     "vue-loader": "^17.0.0",
     "vue-router": "^4.1.3",
-    "vue3-json-viewer": "^2.2.2",
-    "xterm": "^4.19.0",
-    "xterm-addon-attach": "^0.7.0",
-    "xterm-addon-fit": "^0.5.0",
-    "xterm-addon-search": "^0.10.0",
-    "xterm-addon-web-links": "^0.7.0"
+    "vue3-json-viewer": "^2.2.2"
   },
   "devDependencies": {
     "@types/three": "^0.148.0",

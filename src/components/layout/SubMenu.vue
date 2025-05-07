@@ -40,9 +40,9 @@ export default defineComponent({
 </script>
 <style scoped>
 :deep(.el-sub-menu__title){
-  margin: 5px;
   border-radius: 10px;
 }
+
 :deep(.el-sub-menu__title:hover) {
   background-color: #006be626;
   color: #006be6;

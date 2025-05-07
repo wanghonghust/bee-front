@@ -77,11 +77,12 @@
 
 </template>
 <script lang="ts" setup>
-import 'xterm/css/xterm.css'
+import '@xterm/xterm/css/xterm.css'
 import {onBeforeUnmount, reactive, ref} from "vue"
-import {Terminal} from 'xterm'
-import {FitAddon} from 'xterm-addon-fit'
-import {AttachAddon} from 'xterm-addon-attach'
+import {Terminal} from '@xterm/xterm'
+import {FitAddon} from '@xterm/addon-fit'
+import {AttachAddon} from '@xterm/addon-attach'
+import { CanvasAddon } from '@xterm/addon-canvas';
 import {FormInstance} from "element-plus/es";
 import {onBeforeRouteLeave} from "vue-router";
 import {sshConfig} from "../../../api/ssh";
@@ -108,7 +109,7 @@ const editableTabsValue = ref('测试')
 const editableTabs = ref<Tab[]>([])
 const initTerm = (item: Tab) => {
   const term1 = new Terminal({
-    rendererType: "canvas",
+    // rendererType: "canvas",
     fontSize: 16,
     cursorBlink: true,
     windowsMode: true,
@@ -116,10 +117,12 @@ const initTerm = (item: Tab) => {
   item.term = term1
   const attachAddon = new AttachAddon(item.socket);
   const fitAddon = new FitAddon();
-  item.term.loadAddon(attachAddon);
-  item.term.loadAddon(fitAddon);
+  const canvasAddon = new CanvasAddon();
   const ele = document.getElementById(item.sessionId) as HTMLElement
   term1.open(ele);
+  item.term.loadAddon(attachAddon);
+  item.term.loadAddon(fitAddon);
+  item.term.loadAddon(canvasAddon);
   fitAddon.fit();
   item.term.focus();
 }
@@ -134,7 +137,8 @@ const socketOnOpen = (item: Tab) => {
   if (!item.socket) {
     return
   }
-  item.socket.onopen = () => {
+  item.socket.onopen = (ev) => {
+    console.log(ev)
     // 链接成功后
     initTerm(item)
   }
