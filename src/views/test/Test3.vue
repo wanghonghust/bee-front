@@ -76,11 +76,11 @@
 
 </template>
 <script lang="ts" setup>
-import 'xterm/css/xterm.css'
+import '@xterm/xterm/css/xterm.css'
 import {onBeforeUnmount, reactive, ref} from "vue"
-import {Terminal} from 'xterm'
-import {FitAddon} from 'xterm-addon-fit'
-import {AttachAddon} from 'xterm-addon-attach'
+import {Terminal} from '@xterm/xterm'
+import {FitAddon} from '@xterm/addon-fit'
+import {AttachAddon} from '@xterm/addon-attach'
 import {FormInstance} from "element-plus/es";
 import {onBeforeRouteLeave} from "vue-router";
 import {sshConfig} from "../../api/ssh";
@@ -107,7 +107,6 @@ const editableTabsValue = ref('测试')
 const editableTabs = ref<Tab[]>([])
 const initTerm = (item: Tab) => {
   const term1 = new Terminal({
-    rendererType: "canvas",
     fontSize: 16,
     cursorBlink: true,
     windowsMode: true,
