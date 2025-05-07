@@ -2,11 +2,11 @@
   <div ref="xterm" class="xterm"/>
 </template>
 <script lang="ts" setup>
-import 'xterm/css/xterm.css'
+import '@xterm/xterm/css/xterm.css'
 import {onBeforeUnmount, onMounted, ref} from "vue"
-import {Terminal} from 'xterm'
-import {FitAddon} from 'xterm-addon-fit'
-import {AttachAddon} from 'xterm-addon-attach'
+import {Terminal} from '@xterm/xterm'
+import {FitAddon} from '@xterm/addon-fit'
+import {AttachAddon} from '@xterm/addon-attach'
 
 const xterm = ref(null)
 const term = ref<Terminal>()
