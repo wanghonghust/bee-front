@@ -46,11 +46,11 @@ onMounted(() => {
   controls.enableDamping = true;
 
   const dracoLoader = new DRACOLoader();
-  dracoLoader.setDecoderPath('jsm/libs/draco/gltf/');
+  dracoLoader.setDecoderPath(new URL('../../assets/jsm/libs/draco/gltf/', import.meta.url).href);
 
   const loader = new GLTFLoader();
   loader.setDRACOLoader(dracoLoader);
-  loader.load('models/gltf/LittlestTokyo.glb', function (gltf) {
+  loader.load(new URL('../../assets/models/gltf/LittlestTokyo.glb', import.meta.url).href, function (gltf) {
 
     const model = gltf.scene;
     model.position.set(1, 1, 0);
