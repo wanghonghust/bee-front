@@ -22,13 +22,13 @@ onMounted(() => {
   const container = document.getElementById('container');
 
   const stats = Stats();
-  container.appendChild(stats.dom);
+  container!.appendChild(stats.dom);
 
   const renderer = new THREE.WebGLRenderer({antialias: true});
   renderer.setPixelRatio(window.devicePixelRatio);
   renderer.setSize(window.innerWidth, window.innerHeight);
   renderer.outputEncoding = THREE.sRGBEncoding;
-  container.appendChild(renderer.domElement);
+  container!.appendChild(renderer.domElement);
 
   const pmremGenerator = new THREE.PMREMGenerator(renderer);
 
